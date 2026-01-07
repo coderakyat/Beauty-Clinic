@@ -1,0 +1,111 @@
+
+export const services = [
+    {
+        id: "facial-treatments",
+        category: "Facial Treatments",
+        description: "Deep cleansing and rejuvenating treatments for radiant skin.",
+        items: [
+            {
+                id: "f1",
+                name: "Signature Glow Facial",
+                description: "Our signature facial for instant brightening and deep hydration.",
+                duration: "60 mins",
+                price: "IDR 450.000",
+                image: "/services/placeholder.jpg",
+            },
+            {
+                id: "f2",
+                name: "Acne Clear Facial",
+                description: "Targeted treatment to clear pores and reduce inflammation.",
+                duration: "75 mins",
+                price: "IDR 500.000",
+                image: "/services/placeholder.jpg",
+            },
+            {
+                id: "f3",
+                name: "Gold Anti-Aging Facial",
+                description: "Luxurious treatment using 24k gold leaf for lifting and firming.",
+                duration: "90 mins",
+                price: "IDR 850.000",
+                image: "/services/placeholder.jpg",
+            },
+        ],
+    },
+    {
+        id: "laser-treatments",
+        category: "Laser & Light Therapy",
+        description: "Advanced technology for skin resurfacing and pigment correction.",
+        items: [
+            {
+                id: "l1",
+                name: "PicoSure Laser",
+                description: "Focus lens array technology for scar and pigmentation removal.",
+                duration: "45 mins",
+                price: "IDR 2.500.000",
+                image: "/services/placeholder.jpg",
+            },
+            {
+                id: "l2",
+                name: "IPL Skin Rejuvenation",
+                description: "Intense Pulsed Light therapy for even skin tone.",
+                duration: "30 mins",
+                price: "IDR 1.200.000",
+                image: "/services/placeholder.jpg",
+            },
+        ],
+    },
+    {
+        id: "injectables",
+        category: "Injectables",
+        description: "Enhance features and reduce wrinkles with precision.",
+        items: [
+            {
+                id: "i1",
+                name: "Botox Anti-Wrinkle",
+                description: "Reduce fine lines on forehead and around eyes.",
+                duration: "30 mins",
+                price: "IDR 80.000 / unit",
+                image: "/services/placeholder.jpg",
+            },
+            {
+                id: "i2",
+                name: "Hyaluronic Acid Filler",
+                description: "Restore volume to cheeks, lips, and chin.",
+                duration: "45 mins",
+                price: "IDR 3.500.000 / cc",
+                image: "/services/placeholder.jpg",
+            },
+            {
+                id: "i3",
+                name: "Skin Booster DNA Salmon",
+                description: "Deep skin hydration and repair.",
+                duration: "45 mins",
+                price: "IDR 2.500.000",
+                image: "/services/placeholder.jpg",
+            },
+        ],
+    },
+    {
+        id: "body-treatments",
+        category: "Body Treatments",
+        description: "Sculpt and tone your body with non-invasive procedures.",
+        items: [
+            {
+                id: "b1",
+                name: "Fat Freezing Cryo",
+                description: "Eliminate stubborn fat pockets with cold technology.",
+                duration: "60 mins",
+                price: "IDR 3.000.000",
+                image: "/services/placeholder.jpg",
+            },
+            {
+                id: "b2",
+                name: "RF Body Contouring",
+                description: "Radio frequency skin tightening for the body.",
+                duration: "45 mins",
+                price: "IDR 1.500.000",
+                image: "/services/placeholder.jpg",
+            },
+        ],
+    },
+];

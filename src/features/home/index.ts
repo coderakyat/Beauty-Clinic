@@ -1,0 +1,8 @@
+// Home Feature - Component exports
+export { Hero } from './components/Hero';
+export { AboutSection } from './components/AboutSection';
+export { ServicesPreview } from './components/ServicesPreview';
+export { DoctorsPreview } from './components/DoctorsPreview';
+export { GalleryPreview } from './components/GalleryPreview';
+export { Testimonials } from './components/Testimonials';
+export { FAQSection } from './components/FAQSection';
