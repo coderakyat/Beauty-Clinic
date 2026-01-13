@@ -4,7 +4,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata = {
-    title: "Blog & Artikel - Beuty Clinic",
+    title: "Blog & Artikel - Contoh6",
     description: "Temukan tips kecantikan, informasi treatment, dan tren terbaru dari ahli kami.",
 };
 

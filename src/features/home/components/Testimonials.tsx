@@ -116,7 +116,7 @@ export function Testimonials() {
                         Cerita Para <span className="text-primary">Pasien</span>
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Dengarkan pengalaman mereka yang telah merasakan perbedaan di Beuty Clinic.
+                        Dengarkan pengalaman mereka yang telah merasakan perbedaan di Contoh6.
                     </p>
                 </div>
 

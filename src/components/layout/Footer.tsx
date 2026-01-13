@@ -8,7 +8,7 @@ export function Footer() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div>
-                        <h3 className="text-xl font-heading font-bold text-primary mb-4">Beuty Clinic</h3>
+                        <h3 className="text-xl font-heading font-bold text-primary mb-4">Contoh6</h3>
                         <p className="text-sm text-gray-300">
                             Klinik kecantikan premium dengan layanan terbaik dan teknologi terkini untuk perawatan kulit Anda.
                         </p>
@@ -46,7 +46,7 @@ export function Footer() {
                     </div>
                 </div>
                 <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
-                    <p>&copy; {new Date().getFullYear()} Beuty Clinic. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Contoh6. All rights reserved.</p>
                 </div>
             </div>
         </footer>

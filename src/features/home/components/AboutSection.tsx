@@ -13,14 +13,14 @@ export function AboutSection() {
                         <div className="absolute inset-0 bg-muted flex items-center justify-center text-muted-foreground">
                             <span className="text-lg">About Us Image</span>
                         </div>
-                        {/* <Image src="/about-image.jpg" alt="About Beuty Clinic" fill className="object-cover" /> */}
+                        {/* <Image src="/about-image.jpg" alt="About Contoh6" fill className="object-cover" /> */}
                     </div>
                     <div className="space-y-6">
                         <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">
-                            The Art of Ageless Beauty
+                            The Art of Ageless Contoh6
                         </h2>
                         <p className="text-lg text-muted-foreground leading-relaxed">
-                            At Beuty Clinic, we believe that beauty is a personal journey.
+                            At Contoh6, we believe that beauty is a personal journey.
                             Our vision is to provide a sanctuary where advanced medical science meets
                             luxury hospitality. With state-of-the-art technology and a team of
                             certified dermatologists, we are dedicated to revealing your natural radiance.

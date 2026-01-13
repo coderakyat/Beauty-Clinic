@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
     }
 
     return {
-        title: `${post.title} - Beuty Clinic`,
+        title: `${post.title} - Contoh6`,
         description: post.excerpt,
     };
 }

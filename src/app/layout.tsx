@@ -16,8 +16,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Beuty Clinic | Premium Aesthetic Treatments",
-  description: "Experience the art of beauty at Beuty Clinic. Professional doctors, advanced technology, and premium service.",
+  title: "Contoh6 | Premium Aesthetic Treatments",
+  description: "Experience the art of beauty at Contoh6. Professional doctors, advanced technology, and premium service.",
 };
 
 export default function RootLayout({

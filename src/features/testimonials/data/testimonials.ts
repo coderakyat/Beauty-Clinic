@@ -34,14 +34,14 @@ export const testimonials: Testimonial[] = [
         name: "Maya Kusuma",
         treatment: "Anti-Aging Treatment",
         rating: 5,
-        quote: "Beuty Clinic adalah klinik kecantikan terbaik yang pernah saya kunjungi. Pelayanannya istimewa dan hasilnya natural.",
+        quote: "Contoh6 adalah klinik kecantikan terbaik yang pernah saya kunjungi. Pelayanannya istimewa dan hasilnya natural.",
     },
     {
         id: 5,
         name: "Rina Permata",
         treatment: "Botox & Filler",
         rating: 5,
-        quote: "Sangat puas dengan hasil treatment-nya! Wajah terlihat lebih fresh tanpa berlebihan. Terima kasih Beuty Clinic!",
+        quote: "Sangat puas dengan hasil treatment-nya! Wajah terlihat lebih fresh tanpa berlebihan. Terima kasih Contoh6!",
     },
     {
         id: 6,
