@@ -1,37 +1,60 @@
-
 "use client";
 
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useReservationModal } from "@/context/ReservationModalContext";
 
 export function Hero() {
-    return (
-        <section className="relative h-screen flex items-center justify-start overflow-hidden bg-[url('/hero-bg.jpg')] bg-cover bg-center">
-            {/* Premium Gradient Overlay for better text legibility & depth */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
-            <div className="absolute inset-0 bg-black/20" /> {/* General dimmer */}
+    const { openModal } = useReservationModal();
 
-            <div className="container relative z-10 px-4 md:px-6 text-left text-white">
+    return (
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    alt="Luxury Clinic Interior"
+                    className="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRDcxBxOtMYaWSwIUrEIYuMO0tiTF-9cVEW8ZFeynjSeKXaL7eApNl4vFzVE5r1YdB6tmp6t9T0993k0IP8w3hdFYJXWifjr2OB0um0DuEfv90nWxPHvYUKLjT2GVh0ymQDPwiF_fT8IWRihhzUtpruxQ2ayiNj8NOD0xPov_42bccDq3HsI6DJAKooNT6GRTdfU22yPqyeV_4bbQxPtJ5YHvkGsc2sl8JB8nWTqX1VIxvCqPfF9DarG9rBs8z8ZRiryQKpKw0EuEK"
+                />
+                {/* Premium Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/30" />
+            </div>
+
+            {/* Content */}
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20">
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="max-w-2xl space-y-8"
+                    className="max-w-2xl"
                 >
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading tracking-tight text-white drop-shadow-lg leading-[1.1]">
-                        Unveil Your <br />
-                        <span className="text-primary italic">True Radiance</span>
+                    {/* Badge */}
+                    <span className="inline-block py-1 px-3 bg-primary/20 border border-primary/50 text-primary text-xs font-bold tracking-wider mb-6 uppercase">
+                        Klinik Estetika Premium
+                    </span>
+
+                    {/* Heading */}
+                    <h1 className="font-display text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
+                        Ungkap <br />
+                        <span className="text-primary italic">Kecantikan Alami Anda</span>
                     </h1>
-                    <p className="text-lg md:text-xl text-gray-200 drop-shadow-sm font-light leading-relaxed max-w-[600px]">
-                        Experience world-class aesthetic treatments tailored to your unique beauty.
-                        Where science meets art in a sanctuary of luxury.
+
+                    {/* Description */}
+                    <p className="text-lg text-gray-200 mb-10 max-w-lg font-light leading-relaxed">
+                        Rasakan perawatan estetika kelas dunia yang disesuaikan dengan kecantikan unik Anda.
+                        Dimana ilmu pengetahuan bertemu seni dalam suasana mewah.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                        <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 border-0 h-12 px-8 text-lg rounded-full shadow-lg hover:shadow-primary/20 transition-all duration-300 transform hover:scale-105">
-                            <Link href="/reservasi">Reservasi Sekarang</Link>
+
+                    {/* CTA Buttons */}
+                    <div className="flex flex-col sm:flex-row gap-4">
+                        <Button
+                            onClick={openModal}
+                            className="bg-primary hover:bg-primary-hover text-background font-bold py-3.5 px-8 transition-all shadow-glow flex items-center justify-center"
+                        >
+                            Reservasi Sekarang
                         </Button>
-                        <Button asChild variant="outline" size="lg" className="bg-transparent text-white border-white/50 hover:bg-white/10 hover:border-white h-12 px-8 text-lg rounded-full backdrop-blur-sm transition-all duration-300">
+                        <Button asChild variant="outline" className="bg-transparent border border-gray-300 text-foreground hover:bg-foreground hover:text-background font-medium py-3.5 px-8 transition-all flex items-center justify-center">
                             <Link href="/layanan">Lihat Layanan</Link>
                         </Button>
                     </div>

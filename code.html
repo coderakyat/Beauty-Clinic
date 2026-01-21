@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contoh6 - Luxury Aesthetic Clinic</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#D4AF37", // Luxurious Gold
+                        "primary-hover": "#B59428",
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#0A1F1C", // Deep Forest Green
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#0F2925", // Slightly lighter green for cards
+                        "surface-alt-light": "#F3F4F6",
+                        "surface-alt-dark": "#15332E", // Another green shade for sections
+                        "text-light": "#1F2937",
+                        "text-dark": "#F0FDF4", // Very light mint/white
+                        "text-muted-light": "#6B7280",
+                        "text-muted-dark": "#AABEB9", // Muted green-gray
+                        "border-light": "#E5E7EB",
+                        "border-dark": "#1F4A44", // Deep green border
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Lato", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        lg: "0.75rem",
+                        xl: "1rem",
+                    },
+                    boxShadow: {
+                        'glow': '0 0 15px rgba(212, 175, 55, 0.3)',
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0A1F1C;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1F4A44;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2C5E55;
+        }
+
+        .text-gold-gradient {
+            background: linear-gradient(to right, #D4AF37, #F2E3BC, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300 antialiased">
+    <nav
+        class="fixed w-full z-50 transition-all duration-300 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-border-light dark:border-border-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-display font-bold text-2xl text-primary tracking-wide">Contoh6</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a class="text-sm font-medium text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary transition-colors"
+                        href="#">Beranda</a>
+                    <a class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors"
+                        href="#">Layanan</a>
+                    <a class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors"
+                        href="#">Dokter</a>
+                    <a class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors"
+                        href="#">Galeri</a>
+                    <a class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors"
+                        href="#">Blog</a>
+                    <button
+                        class="bg-primary hover:bg-primary-hover text-background-dark font-bold py-2 px-6 rounded-full text-sm transition-transform transform hover:scale-105 shadow-glow">
+                        Reservasi Sekarang
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-text-light dark:text-text-dark hover:text-primary focus:outline-none">
+                        <span class="material-icons-outlined text-2xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img alt="Luxury Clinic Interior" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRDcxBxOtMYaWSwIUrEIYuMO0tiTF-9cVEW8ZFeynjSeKXaL7eApNl4vFzVE5r1YdB6tmp6t9T0993k0IP8w3hdFYJXWifjr2OB0um0DuEfv90nWxPHvYUKLjT2GVh0ymQDPwiF_fT8IWRihhzUtpruxQ2ayiNj8NOD0xPov_42bccDq3HsI6DJAKooNT6GRTdfU22yPqyeV_4bbQxPtJ5YHvkGsc2sl8JB8nWTqX1VIxvCqPfF9DarG9rBs8z8ZRiryQKpKw0EuEK" />
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-background-dark/95 via-background-dark/70 to-background-dark/30 dark:from-[#0A1F1C]/95 dark:via-[#0A1F1C]/70 dark:to-transparent">
+            </div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20">
+            <div class="max-w-2xl">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-primary/20 border border-primary/50 text-primary text-xs font-bold tracking-wider mb-6 uppercase">Premier
+                    Aesthetic Clinic</span>
+                <h1 class="font-display text-5xl md:text-7xl font-bold text-surface-light mb-6 leading-tight">
+                    Unveil Your <br />
+                    <span class="text-primary italic">True Radiance</span>
+                </h1>
+                <p class="text-lg text-gray-200 mb-10 max-w-lg font-light leading-relaxed">
+                    Experience world-class aesthetic treatments tailored to your unique beauty. Where science meets art
+                    in a sanctuary of luxury.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button
+                        class="bg-primary hover:bg-primary-hover text-background-dark font-bold py-3.5 px-8 rounded-full transition-all shadow-glow flex items-center justify-center">
+                        Reservasi Sekarang
+                    </button>
+                    <button
+                        class="bg-transparent border border-gray-300 dark:border-gray-400 text-surface-light hover:bg-surface-light hover:text-background-dark font-medium py-3.5 px-8 rounded-full transition-all flex items-center justify-center">
+                        Lihat Layanan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-surface-alt-light dark:bg-surface-alt-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-primary hidden md:block">
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-2xl h-[500px]">
+                        <img alt="Abstract smooth texture representing skin care" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7EWJQhH780w1CABjxAPBB8eKmlbyYN6fxbW0ypDgPJEFn91XwGn9NXHAmCXQAUUUd0eJu2uTyVJBtdH6OJSYCwkBs8t-2hnXcxDB8Or-FmoLoRxZmmdp3WqkYBaqJpFZaAM-_FH7VUSjXi12kIrR36TxM811kZ4qPwrtEp8HfHavhulHwovNFnAndxFOqYQ7yfigLOYv6zhxR0gRO0bU1ZQcAUnJ5fMaNO3TadmEWGfrK6Q8_uDQVHQ7qzA4Rmp_SzVjKP47CoqN8" />
+                    </div>
+                    <div
+                        class="absolute -bottom-6 -right-6 bg-surface-dark p-6 rounded-lg shadow-xl border border-border-dark hidden md:block max-w-xs">
+                        <p class="text-primary font-display text-4xl font-bold mb-1">10+</p>
+                        <p class="text-text-muted-dark text-sm">Years of Excellence in Aesthetic Medicine</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark mb-6">
+                        The Art of Ageless <span class="text-primary">Contoh6</span>
+                    </h2>
+                    <p class="text-text-muted-light dark:text-text-muted-dark mb-8 leading-relaxed">
+                        At Contoh6, we believe that beauty is a personal journey. Our vision is to provide a sanctuary
+                        where advanced medical science meets luxury hospitality. With state-of-the-art technology and a
+                        team of certified dermatologists, we are dedicated to revealing your natural radiance.
+                    </p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start">
+                            <span class="material-icons-outlined text-primary mr-3 mt-0.5">check_circle</span>
+                            <span class="text-text-light dark:text-text-dark font-medium">Certified Medical
+                                Professionals</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons-outlined text-primary mr-3 mt-0.5">check_circle</span>
+                            <span class="text-text-light dark:text-text-dark font-medium">Advanced FDA-Approved
+                                Technology</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons-outlined text-primary mr-3 mt-0.5">check_circle</span>
+                            <span class="text-text-light dark:text-text-dark font-medium">Private and Luxurious
+                                Atmosphere</span>
+                        </li>
+                    </ul>
+                    <button
+                        class="text-primary font-bold hover:text-primary-hover flex items-center group transition-colors">
+                        More About Us
+                        <span
+                            class="material-icons-outlined ml-2 transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-background-light dark:bg-background-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-primary mb-4">Our Premium Services</h2>
+                <p class="text-text-muted-light dark:text-text-muted-dark">Discover a curated selection of treatments
+                    designed to enhance your natural beauty and boost your confidence.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                    class="group bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-primary/30">
+                    <div class="h-48 overflow-hidden">
+                        <img alt="Facial Treatments"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmPt4hkKCVhjRBkDVap5HUkHmGjMoLSepGILx0zRUDtG227NV_hgwwOXW7m9SZ8xAfTBU5Bd-lLxHa73OMMKNYXgjczYvrwyq4-mhekx5klzv5NTMEgmECiSVJkyNNLodz5D0tewdWkltk3QAjkgB-J7b4E76DKsk4aTfRbyb1_eUEuY8ZCQoGRfNfIXjzsSzffV3pYJBbuYlx3Vuv627nhe9ae7ssOKB1VYULHDWomEeBcRDpt3WguIhqjK_3sRLywGLBaDH8C5Xg" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-bold text-text-light dark:text-text-dark mb-2">Facial
+                            Treatments</h3>
+                        <p class="text-sm text-text-muted-light dark:text-text-muted-dark mb-4 line-clamp-3">Rejuvenate
+                            your skin with our signature deep-cleansing and hydrating facials.</p>
+                        <p class="text-xs text-primary font-bold uppercase tracking-wide mb-4">Starts from IDR 350k</p>
+                        <a class="inline-flex items-center text-sm font-medium text-primary hover:text-primary-hover"
+                            href="#">
+                            Learn More <span class="material-icons-outlined text-sm ml-1">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="group bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-primary/30">
+                    <div class="h-48 overflow-hidden">
+                        <img alt="Laser Therapy"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1ZEMU_c0s2erH6hGS6vq0aR_11Iq0vKrzq8iP4N4zDpzEIRZtnTitpjr-ZO39-0QpDgpzSSDBKk8cIVjTH0_ccmq70Cp58eDO24t3cy-Cr6KfHdQIJo1erebYvtHtK8aTxwYvt9bD9HwatGtTSGp245Liu8uwypHOvQI3HAoFFs0NoLRlmmmwo6xC52GVS-VRRoW_lAyALQ6H0S4lPN8Ja9v4TsoQpcAO6jipg0AnYiPCyE6EAgy9-qjMXRSH6eJGYpIf9N07ftFE" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-bold text-text-light dark:text-text-dark mb-2">Laser
+                            Therapy</h3>
+                        <p class="text-sm text-text-muted-light dark:text-text-muted-dark mb-4 line-clamp-3">Advanced
+                            laser solutions for acne scars, pigmentation, and skin resurfacing.</p>
+                        <p class="text-xs text-primary font-bold uppercase tracking-wide mb-4">Starts from IDR 1.2M</p>
+                        <a class="inline-flex items-center text-sm font-medium text-primary hover:text-primary-hover"
+                            href="#">
+                            Learn More <span class="material-icons-outlined text-sm ml-1">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="group bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-primary/30">
+                    <div class="h-48 overflow-hidden">
+                        <img alt="Anti-Aging"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmoSnMMSdO4Y5-NGofjwi82DTb3z1WKJo85vKL3jztxIPDjl709GeSCrz5at7uI7scxZBsMUBTZEHRy-MjI4E8Xpi7dLS0xjkmYSwAPwCuMejLcymir0FVijDLR_LbuvVmk89GzXXRiS88nSAXFwnDS8FsD6vHuFvzHFWQRCdEQE4rodJhsxnXKadOeV7K1g1LyBgeTsxbWJ4wiJyGdtzKl1cG5kIIa9LwdwqHsiw0hqpsvHauhK0U0yDfNpGvxlVnEUWHSaA-HLaF" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-bold text-text-light dark:text-text-dark mb-2">Anti-Aging
+                        </h3>
+                        <p class="text-sm text-text-muted-light dark:text-text-muted-dark mb-4 line-clamp-3">Botox and
+                            fillers administered by expert professionals for a youthful look.</p>
+                        <p class="text-xs text-primary font-bold uppercase tracking-wide mb-4">Starts from IDR 2.5M</p>
+                        <a class="inline-flex items-center text-sm font-medium text-primary hover:text-primary-hover"
+                            href="#">
+                            Learn More <span class="material-icons-outlined text-sm ml-1">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="group bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-primary/30">
+                    <div class="h-48 overflow-hidden">
+                        <img alt="Body Contouring"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb5rSz93is0poDriJWorKKrRWqgLvlVK9NQYR7jhc5B8AUjIY4ocZd9BdV_MZT1m3hvUi3YitIUWVe_beogBlFfY3gQQzndNn7Htvcc77G6_kVddC4swTFBG6oF7bNzsSsC8Nu7TEqjbXalqy_AVZePSYYOBfRfNBadDyM2GwCZy3OpQpc0qVpdZ8j7MFY7sqB9OO3eJVm2YmB-Pt9RJsA7h3oYtdjqw0Mkwgn1lIh_NX_ds7V-RINfyvyLohlnOr3GUw_MeN2DHR4" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-bold text-text-light dark:text-text-dark mb-2">Body
+                            Contouring</h3>
+                        <p class="text-sm text-text-muted-light dark:text-text-muted-dark mb-4 line-clamp-3">
+                            Non-invasive fat reduction and body shaping treatments tailored to you.</p>
+                        <p class="text-xs text-primary font-bold uppercase tracking-wide mb-4">Starts from IDR 3M</p>
+                        <a class="inline-flex items-center text-sm font-medium text-primary hover:text-primary-hover"
+                            href="#">
+                            Learn More <span class="material-icons-outlined text-sm ml-1">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button
+                    class="bg-transparent border border-primary text-primary hover:bg-primary hover:text-background-dark font-bold py-3 px-8 rounded-full transition-all">
+                    View All Services
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-surface-alt-light dark:bg-surface-alt-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-primary mb-4">Meet Our Experts</h2>
+                <p class="text-text-muted-light dark:text-text-muted-dark">Our team of board-certified dermatologists
+                    and aesthetic specialists are dedicated to providing safe, effective, and personalized treatments.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="text-center group">
+                    <div class="relative w-64 h-64 mx-auto mb-6 rounded-2xl overflow-hidden">
+                        <img alt="Dr. Sarah Johnson"
+                            class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDp9hGwcNEfxyadoJKwuSKlOk6Wn8EXY0HLut3kdWWPvDTywI5wAPd_zZ64SIZr1jKkTTOmjXgOSmGhSZBX_fN2cEoIp6oyleDflFBNW3JqORKjeukMLo4VivMXaq9jO56-9HSYjgUPdjQELMMMcIuAlpxBbSbzqeFRZzYYTHIdEUPPp74B56_pvNCO41INd5qRjXbhVV-m7jxUef68vp22JujfKTwEmKFAXbJwW7m1rUuatu54F_WE2pMuWMCBaup-1xwY1Ba5j2m" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                        </div>
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-text-light dark:text-text-dark">Dr. Sarah Johnson
+                    </h3>
+                    <p class="text-primary text-sm font-medium mb-3">Dermatologist</p>
+                    <a class="text-xs text-text-muted-light dark:text-text-muted-dark hover:text-primary uppercase tracking-wider"
+                        href="#">View Profile</a>
+                </div>
+                <div class="text-center group">
+                    <div class="relative w-64 h-64 mx-auto mb-6 rounded-2xl overflow-hidden">
+                        <img alt="Dr. Michael Chen"
+                            class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ57z14NBvxFFyvXOx8o39c2H5b_a8NWKGlNJBbVYr3hXLi_ppBh2FUyi_Z2PPtKwDVzkmOisxJrIQg6rBJIYN9NGJ9xvKfZDmkS5Cn_fSZhDOn0cO0LmkLRZxutYps7ootoWjQJ57iBWYnQhgLLjhdmXV-n_AUShQ0souuHJprN_JyErUwagInPOb83SFJqLN9_9oHlLjpywerPVWFpgsmewqyxgcb8T3sNJjUXaMlAkICHNgv73y40vz3Dys5DlnPGxJQ1I03r2j" />
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-text-light dark:text-text-dark">Dr. Michael Chen</h3>
+                    <p class="text-primary text-sm font-medium mb-3">Aesthetic Surgeon</p>
+                    <a class="text-xs text-text-muted-light dark:text-text-muted-dark hover:text-primary uppercase tracking-wider"
+                        href="#">View Profile</a>
+                </div>
+                <div class="text-center group">
+                    <div class="relative w-64 h-64 mx-auto mb-6 rounded-2xl overflow-hidden">
+                        <img alt="Dr. Emily Davis"
+                            class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB82aZrSJEXbMJ9HN8fjaR0ueokKz2EGTPxM0kxUcw6SXx9eTGetN9Fdobjwq1uVVb0zInRR3KEDi_MqC-LAzemx48lDW-23bUPBXtOmJcDNdBSi5YqF-YhBVsgeN4T7hiSmqmAoW32wg6099VA195yJKhRhE3ti8ZQx_D98AgKI9KUz8PkY7Uu1C0U0f9Z31d1iT8_Yhd6Uq9VmySfX7GkAI0TKxnpPU8G7xkI3gYUcPcWzdC22LJr1Sjq4W_1X7Pn38xvEG92-aA4" />
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-text-light dark:text-text-dark">Dr. Emily Davis</h3>
+                    <p class="text-primary text-sm font-medium mb-3">Skin Specialist</p>
+                    <a class="text-xs text-text-muted-light dark:text-text-muted-dark hover:text-primary uppercase tracking-wider"
+                        href="#">View Profile</a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button
+                    class="bg-transparent border border-gray-400 dark:border-gray-600 text-text-light dark:text-text-dark hover:border-primary hover:text-primary py-2 px-6 rounded-full text-sm transition-all">
+                    See All Specialists
+                </button>
+            </div>
+        </div>
+    </section>
+    <section
+        class="py-24 bg-gradient-to-b from-background-light to-surface-alt-light dark:from-surface-alt-dark dark:to-background-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div class="max-w-xl">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark mb-4">
+                        Visualizing Perfection</h2>
+                    <p class="text-text-muted-light dark:text-text-muted-dark">See the transformative results and our
+                        luxurious facilities.</p>
+                </div>
+                <div
+                    class="mt-6 md:mt-0 bg-surface-light dark:bg-surface-dark p-1 rounded-full inline-flex border border-border-light dark:border-border-dark">
+                    <button
+                        class="bg-primary text-background-dark font-bold py-2 px-6 rounded-full text-sm shadow-md">Real
+                        Results</button>
+                    <button
+                        class="text-text-muted-light dark:text-text-muted-dark hover:text-text-light dark:hover:text-text-dark py-2 px-6 rounded-full text-sm transition-colors">Our
+                        Clinic</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="rounded-xl overflow-hidden h-80 relative group">
+                    <img alt="Skin treatment result"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJWyLzS2TPLIB2SSqOLh9JQYsKiH0zOLdGZprQmFsxvC--z9a_nWvsCSYx0kqddovoXPYwgWl36LkcQdeneuNAPFAZQ8PBUkNsmeAn5c23g61NHqUFOrXRBcFCpXoTV31x55oE0AFRs1FPbxJuM9DtewY1rgeJtMyt9fRXV_GAzg25_GZvMTQ0cOmQTCAz_5EhnsujV3u_1gaPWXiMeUjJV3cVfPAsmNF6JNCfETxit9OMPmRm3FCXt1oUXZi-QuvbuvJhjSfWoC-r" />
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span
+                            class="text-white font-display text-lg tracking-widest uppercase border border-white px-4 py-2">Acne
+                            Treatment</span>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden h-80 relative group md:mt-8">
+                    <img alt="Facial radiance result"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuASj1ivvyO86J41kVD9LX16E4J5Q84E9hq3OUM0HfopHO8SFzD1k1ynujAcWWdIOHgkWJ43MwbF53JqQQZgsZ51abUHEyGXT-qU-KNFIVbu4duRDVr6W9sYfSeTOyxFMIJ2ut3YXLh4PcTOTkFn2BsWKZR-5dovSRs4iQ-ie6_pHSkkdNpJc_1POUWig4AZVHdO7EG0ZPDkY8kkbbX0ChgkeZgRW_twjv8PQlgmBS2qIbrdsB_lTn6TAg-y5-MGxq-Q2D0-NVFpSUyF" />
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span
+                            class="text-white font-display text-lg tracking-widest uppercase border border-white px-4 py-2">Glow
+                            Booster</span>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden h-80 relative group">
+                    <img alt="Anti-aging result"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkqFUsUi7UQlsLzuQxgwIr9OVXDWl5ftOt-0R2SbM8ulXTkPtdorhAXi7J5gCLlHKeMSKo1crkS210LqLYkb7Fdp1uhg8tpUzTSotmn3_f9v8o1E85GQ2Z08ei54BtomFL9zobJ9CMDe4rRSCOfcM5Nr7nRVOsz34Spe-BDygZqU1ZIFVMpoaA3pEDDxG08mFZnN3ytYJpyGAOpfWk16UFm1dZR7xg9-6AOIo85m9lIJwgYjubJaW3XXgrhIeyBXQuUtNHYl21viym" />
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span
+                            class="text-white font-display text-lg tracking-widest uppercase border border-white px-4 py-2">Face
+                            Lift</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mt-12">
+                <button
+                    class="bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark text-text-light dark:text-text-dark py-2 px-6 rounded-full text-sm font-medium hover:bg-gray-100 dark:hover:bg-surface-alt-dark transition-colors">
+                    View Full Gallery
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-background-dark relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute right-0 top-0 w-96 h-96 bg-primary rounded-full filter blur-[100px]"></div>
+            <div class="absolute left-0 bottom-0 w-96 h-96 bg-emerald-900 rounded-full filter blur-[100px]"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span
+                    class="text-xs font-bold text-primary border border-primary/40 rounded-full px-3 py-1 uppercase tracking-widest mb-4 inline-block">Testimonial</span>
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-white">Cerita Para <span
+                        class="text-primary">Pasien</span></h2>
+                <p class="text-text-muted-dark mt-4">Dengarkan pengalaman mereka yang telah merasakan perbedaan di
+                    Contoh6.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-surface-alt-dark/40 backdrop-blur-sm border border-white/5 p-8 rounded-2xl relative">
+                    <span class="absolute top-4 right-4 text-primary text-4xl font-display opacity-20">"</span>
+                    <div class="flex text-primary mb-4">
+                        <span class="material-icons-outlined text-sm">star</span>
+                        <span class="material-icons-outlined text-sm">star</span>
+                        <span class="material-icons-outlined text-sm">star</span>
+                        <span class="material-icons-outlined text-sm">star</span>
+                        <span class="material-icons-outlined text-sm">star</span>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-6 leading-relaxed italic">"Pelayanan aman dan cepat. Hasil sangat
+                        terlihat, kulit lebih halus. Pasti akan kembali lagi!"</p>
+                    <div class="flex items-center">
+                        <div
+                            class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold mr-3">
+                            S</div>
+                        <div>
+                            <p class="text-white text-sm font-bold">Sari Putri</p>
+                            <p class="text-xs text-gray-400">Laser Peeling</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-surface-alt-dark/80 backdrop-blur-md border border-primary/30 p-8 rounded-2xl relative transform md:-translate-y-4 shadow-glow">
+                    <span class="absolute top-4 right-4 text-primary text-4xl font-display opacity-20">"</span>
+                    <div class="flex text-primary mb-4">
+                        <span class="material-icons-outlined text-sm">star</span>
+                        <span class="material-icons-outlined text-sm">star</span>
+                        <span class="material-icons-outlined text-sm">star</span>
+                        <span class="material-icons-outlined text-sm">star</span>
+                        <span class="material-icons-outlined text-sm">star</span>
+                    </div>
+                    <p class="text-white text-base mb-6 leading-relaxed italic">"Hasil yang luar biasa! Kulit saya
+                        terasa lebih muda dan bercahaya. Stafnya sangat profesional dan ramah. Sangat merekomendasikan!"
+                    </p>
+                    <div class="flex items-center">
+                        <div
+                            class="w-10 h-10 rounded-full bg-primary text-background-dark flex items-center justify-center font-bold mr-3">
+                            A</div>
+                        <div>
+                            <p class="text-white text-sm font-bold">Anisa Rahmawati</p>
+                            <p class="text-xs text-primary/80">Facial Rejuvenation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-surface-alt-dark/40 backdrop-blur-sm border border-white/5 p-8 rounded-2xl relative">
+                    <span class="absolute top-4 right-4 text-primary text-4xl font-display opacity-20">"</span>
+                    <div class="flex text-primary mb-4">
+                        <span class="material-icons-outlined text-sm">star</span>
+                        <span class="material-icons-outlined text-sm">star</span>
+                        <span class="material-icons-outlined text-sm">star</span>
+                        <span class="material-icons-outlined text-sm">star</span>
+                        <span class="material-icons-outlined text-sm">star</span>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-6 leading-relaxed italic">"Pengalamannya sangat mewah dan
+                        menenangkan. Fasilitas klinik benar-benar premium dan hasilnya memuaskan sekali."</p>
+                    <div class="flex items-center">
+                        <div
+                            class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold mr-3">
+                            D</div>
+                        <div>
+                            <p class="text-white text-sm font-bold">Dewi Sartika</p>
+                            <p class="text-xs text-gray-400">Hydrafacial Treatment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <button
+                    class="text-xs text-gray-500 hover:text-white flex items-center justify-center mx-auto transition-colors">
+                    <span class="material-icons-outlined text-sm mr-1">refresh</span>
+                    Memutar otomatis
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-surface-alt-light dark:bg-surface-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="font-display text-2xl font-bold text-primary mb-8">Frequently Asked Questions</h2>
+                    <div class="space-y-4">
+                        <div class="group border-b border-border-light dark:border-border-dark pb-4">
+                            <details class="group">
+                                <summary
+                                    class="flex justify-between items-center font-medium cursor-pointer list-none text-text-light dark:text-text-dark">
+                                    <span>How do I make a reservation?</span>
+                                    <span class="transition group-open:rotate-180">
+                                        <svg fill="none" height="24" shape-rendering="geometricPrecision"
+                                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                            <path d="M6 9l6 6 6-6"></path>
+                                        </svg>
+                                    </span>
+                                </summary>
+                                <p class="text-text-muted-light dark:text-text-muted-dark mt-3 text-sm leading-relaxed">
+                                    You can make a reservation by clicking the "Reservasi Sekarang" button on our
+                                    website, or by contacting our front desk via WhatsApp or phone call.
+                                </p>
+                            </details>
+                        </div>
+                        <div class="group border-b border-border-light dark:border-border-dark pb-4">
+                            <details class="group">
+                                <summary
+                                    class="flex justify-between items-center font-medium cursor-pointer list-none text-text-light dark:text-text-dark">
+                                    <span>What brands of products do you use?</span>
+                                    <span class="transition group-open:rotate-180">
+                                        <svg fill="none" height="24" shape-rendering="geometricPrecision"
+                                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                            <path d="M6 9l6 6 6-6"></path>
+                                        </svg>
+                                    </span>
+                                </summary>
+                                <p class="text-text-muted-light dark:text-text-muted-dark mt-3 text-sm leading-relaxed">
+                                    We use only premium, FDA-approved, and medically certified products tailored to
+                                    specific skin needs, including top international brands.
+                                </p>
+                            </details>
+                        </div>
+                        <div class="group border-b border-border-light dark:border-border-dark pb-4">
+                            <details class="group">
+                                <summary
+                                    class="flex justify-between items-center font-medium cursor-pointer list-none text-text-light dark:text-text-dark">
+                                    <span>Is there a consultation fee?</span>
+                                    <span class="transition group-open:rotate-180">
+                                        <svg fill="none" height="24" shape-rendering="geometricPrecision"
+                                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                            <path d="M6 9l6 6 6-6"></path>
+                                        </svg>
+                                    </span>
+                                </summary>
+                                <p class="text-text-muted-light dark:text-text-muted-dark mt-3 text-sm leading-relaxed">
+                                    The initial consultation fee varies by specialist. However, this fee is often waived
+                                    if you proceed with a treatment plan on the same day.
+                                </p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="font-display text-2xl font-bold text-primary mb-8">Visit Our Sanctuary</h2>
+                    <div
+                        class="bg-background-dark rounded-xl h-64 w-full flex items-center justify-center relative overflow-hidden border border-border-dark">
+                        <div class="absolute inset-0 bg-[#0F2925] opacity-80"></div>
+                        <div class="z-10 text-center">
+                            <span class="material-icons-outlined text-4xl text-text-muted-dark mb-2">map</span>
+                            <p class="text-text-muted-dark text-sm">Google Maps Placeholder</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex items-center text-sm text-text-muted-light dark:text-text-muted-dark">
+                        <span class="font-bold mr-2 text-primary">Opening Hours:</span> Mon - Sun: 10:00 AM - 08:00 PM
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer
+        class="bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <span class="font-display font-bold text-2xl text-primary block mb-6">Contoh6</span>
+                    <p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+                        Klinik kecantikan premium dengan layanan terbaik dan teknologi terkini untuk perawatan kulit
+                        Anda.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-text-light dark:text-text-dark uppercase tracking-wider mb-6">
+                        Layanan</h3>
+                    <ul class="space-y-3 text-sm text-text-muted-light dark:text-text-muted-dark">
+                        <li><a class="hover:text-primary transition-colors" href="#">Facial Treatment</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Laser Therapy</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Anti-Aging</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Konsultasi Dokter</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-text-light dark:text-text-dark uppercase tracking-wider mb-6">Link
+                        Cepat</h3>
+                    <ul class="space-y-3 text-sm text-text-muted-light dark:text-text-muted-dark">
+                        <li><a class="hover:text-primary transition-colors" href="#">Beranda</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Tim Dokter</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Galeri</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Reservasi</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-text-light dark:text-text-dark uppercase tracking-wider mb-6">
+                        Kontak Kami</h3>
+                    <ul class="space-y-3 text-sm text-text-muted-light dark:text-text-muted-dark">
+                        <li>Jl. Kecantikan Indah No. 123, Jakarta</li>
+                        <li>+62 812-3456-7890</li>
+                        <li>info@beautyclinic.com</li>
+                    </ul>
+                    <div class="flex space-x-4 mt-6">
+                        <a class="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors"
+                            href="#">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.072 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors"
+                            href="#">
+                            <span class="sr-only">Facebook</span>
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.791-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors"
+                            href="#">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-border-light dark:border-border-dark pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-xs text-text-muted-light dark:text-text-muted-dark">© 2026 Contoh6. All rights reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0 text-xs text-text-muted-light dark:text-text-muted-dark">
+                    <a class="hover:text-text-light dark:hover:text-text-dark" href="#">Privacy Policy</a>
+                    <a class="hover:text-text-light dark:hover:text-text-dark" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

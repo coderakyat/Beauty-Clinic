@@ -6,3 +6,4 @@ export { DoctorsPreview } from './components/DoctorsPreview';
 export { GalleryPreview } from './components/GalleryPreview';
 export { Testimonials } from './components/Testimonials';
 export { FAQSection } from './components/FAQSection';
+export { ProductsCarousel } from './components/ProductsCarousel';

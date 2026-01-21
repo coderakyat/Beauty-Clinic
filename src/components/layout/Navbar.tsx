@@ -1,4 +1,3 @@
-
 "use client";
 
 import * as React from "react";
@@ -8,18 +7,20 @@ import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
+import { useReservationModal } from "@/context/ReservationModalContext";
 
 const navigation = [
     { name: "Beranda", href: "/" },
     { name: "Layanan", href: "/layanan" },
     { name: "Dokter", href: "/dokter" },
     { name: "Galeri", href: "/galeri" },
-    { name: "Blog", href: "/blog" },
+    { name: "Tentang", href: "/tentang" },
 ];
 
 export function Navbar() {
     const [isOpen, setIsOpen] = React.useState(false);
     const pathname = usePathname();
+    const { openModal } = useReservationModal();
 
     // Prevent scrolling when menu is open
     React.useEffect(() => {
@@ -32,10 +33,10 @@ export function Navbar() {
     }, [isOpen]);
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-background/60 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
-            <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
-                <Link href="/" className="flex items-center gap-2 z-50" onClick={() => setIsOpen(false)}>
-                    <span className="font-heading text-2xl font-bold tracking-tight text-primary">
+        <header className="fixed top-0 z-50 w-full bg-background/90 backdrop-blur-md border-b border-border-dark transition-all duration-300">
+            <div className="max-w-7xl mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
+                <Link href="/" className="flex items-center gap-2 z-50 flex-shrink-0" onClick={() => setIsOpen(false)}>
+                    <span className="font-display text-2xl font-bold tracking-wide text-primary">
                         Contoh6
                     </span>
                 </Link>
@@ -47,27 +48,26 @@ export function Navbar() {
                             key={item.href}
                             href={item.href}
                             className={cn(
-                                "text-sm font-medium transition-colors hover:text-primary relative group",
+                                "text-sm font-medium transition-colors hover:text-primary",
                                 pathname === item.href
-                                    ? "text-primary"
-                                    : "text-muted-foreground"
+                                    ? "text-foreground"
+                                    : "text-text-muted-dark"
                             )}
                         >
                             {item.name}
-                            <span className={cn(
-                                "absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full",
-                                pathname === item.href ? "w-full" : ""
-                            )} />
                         </Link>
                     ))}
-                    <Button asChild size="lg" className="rounded-full px-6 shadow-md hover:shadow-primary/20">
-                        <Link href="/reservasi">Reservasi Sekarang</Link>
+                    <Button
+                        onClick={openModal}
+                        className="bg-primary hover:bg-primary-hover text-background font-bold py-2 px-6 text-sm transition-transform transform hover:scale-105 shadow-glow"
+                    >
+                        Reservasi Sekarang
                     </Button>
                 </nav>
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="flex items-center md:hidden text-foreground z-50 p-2"
+                    className="flex items-center md:hidden text-foreground z-50 p-2 hover:text-primary focus:outline-none"
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Toggle menu"
                 >
@@ -96,10 +96,10 @@ export function Navbar() {
                                     <Link
                                         href={item.href}
                                         className={cn(
-                                            "block text-2xl font-heading font-medium transition-colors hover:text-primary",
+                                            "block text-2xl font-display font-medium transition-colors hover:text-primary",
                                             pathname === item.href
                                                 ? "text-primary"
-                                                : "text-muted-foreground"
+                                                : "text-text-muted-dark"
                                         )}
                                         onClick={() => setIsOpen(false)}
                                     >
@@ -112,10 +112,14 @@ export function Navbar() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: navigation.length * 0.1 + 0.1, duration: 0.3 }}
                             >
-                                <Button asChild size="lg" className="w-full rounded-full text-lg h-12 mt-4">
-                                    <Link href="/reservasi" onClick={() => setIsOpen(false)}>
-                                        Reservasi Sekarang
-                                    </Link>
+                                <Button
+                                    onClick={() => {
+                                        setIsOpen(false);
+                                        openModal();
+                                    }}
+                                    className="w-full bg-primary hover:bg-primary-hover text-background font-bold text-lg h-12 mt-4 shadow-glow"
+                                >
+                                    Reservasi Sekarang
                                 </Button>
                             </motion.div>
                         </nav>

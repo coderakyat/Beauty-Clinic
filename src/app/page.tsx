@@ -5,6 +5,7 @@ import {
   Hero,
   AboutSection,
   ServicesPreview,
+  ProductsCarousel,
   DoctorsPreview,
   GalleryPreview,
   Testimonials,
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         <AboutSection />
         <ServicesPreview />
+        <ProductsCarousel />
         <DoctorsPreview />
         <GalleryPreview />
         <Testimonials />
